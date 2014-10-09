@@ -36,7 +36,7 @@ ofxAVFVideoPlayer::~ofxAVFVideoPlayer()
 //--------------------------------------------------------------
 bool ofxAVFVideoPlayer::loadMovie(string path)
 {
-
+    textPath = path;
     if (bInitialized) {
         close();
     }
@@ -62,6 +62,7 @@ bool ofxAVFVideoPlayer::loadMovie(string path)
     
     bShouldPlay = false;
     return true;
+    
 }
 
 //--------------------------------------------------------------
@@ -564,4 +565,12 @@ void ofxAVFVideoPlayer::reallocatePixels()
     else {
         pixels.allocate(getWidth(), getHeight(), OF_IMAGE_COLOR);
     }
+}
+
+
+
+//--------------------------------------------------------------
+string ofxAVFVideoPlayer::getMoviePath()
+{
+    return textPath;
 }

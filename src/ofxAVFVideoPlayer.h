@@ -92,6 +92,7 @@ public:
     void                firstFrame();
     void                nextFrame();
     void                previousFrame();
+    string              getMoviePath();
     
 protected:
     
@@ -110,6 +111,7 @@ protected:
     float speed;
     
     string moviePath;
+    string textPath;
     
     bool bInitialized;
     void exit(ofEventArgs& args);
